@@ -1,19 +1,25 @@
 import { Canvas } from "@react-three/fiber"
 import Scene from "./components/Scene";
-import Lines from "./components/Lines";
+import PlayButton from "./components/PlayButton";
+import Credits from "./components/Credits";
+import Help from "./components/Help";
 
 
 function App() {
 
-  return (
+  return (<>
     <Canvas camera={{
       fov: 45,
       near: 0.1,
       far: 300,
-      position: [0, 6, -6]
+      position: [0, 7, -9]
     }}>
      <Scene />
     </Canvas>
+      <Help />
+    <PlayButton />
+    <Credits />
+    </>
   )
 }
 
