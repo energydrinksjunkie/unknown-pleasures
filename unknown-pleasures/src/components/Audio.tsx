@@ -11,18 +11,19 @@ const Audio = () => {
     const isMusicPlaying = useStore((state) => state.isMusicPlaying);
 
     useEffect(() => {
-        const audio=audioRef.current;
-        if(isMusicPlaying){
+        const audio = audioRef.current;
+        if (isMusicPlaying) {
             analyserRef.current = new THREE.AudioAnalyser(audio, 512);
             audio.play();
-        } else{
+        } else {
             audio.stop();
         }
     }, [isMusicPlaying]);
 
     return (
-        <PositionalAudio ref={audioRef} url={trackPath} distance={1000000} autoplay={false} load />
+        <PositionalAudio ref={audioRef} url={trackPath} distance={1000000} autoplay={false} />
     )
 };
+
 
 export default Audio;

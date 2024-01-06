@@ -2,11 +2,9 @@ import { Center } from "@react-three/drei";
 import { useMemo, useRef } from "react"
 import { useFrame } from "@react-three/fiber";
 import Line from "./Line";
-import * as THREE from "three";
 import { lerp, map } from "./utils";
 import { analyserRef } from "./Audio";
 import useStore from "./store";
-import { uniform } from "three/examples/jsm/nodes/Nodes.js";
 
 const Lines = () => {
     const linesRef = useRef(null!);
